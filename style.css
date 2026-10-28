@@ -64,3 +64,54 @@ nav a{transition:color .25s,border-color .25s}
 .hero-video .hero-grid{position:relative;z-index:1}
 .hero-video::before{z-index:-1}
 @media(prefers-reduced-motion:reduce){.hero-background-video{display:none}.hero-video{background-image:linear-gradient(90deg,#062f27dd,#062f2770),url("industrial-scene.jpg")}}
+
+/* TAK ES 2026 homepage refinement — scoped to homepage */
+:root{--tak-forest:#063e32;--tak-deep:#052b26;--tak-gold:#dfb567;--tak-cream:#f7f6f0}
+body:has(.home-intro){background:var(--tak-cream)}
+.hero-video{min-height:680px;display:flex;align-items:center;background-color:#07382e}
+.hero-video .hero-grid{padding-top:125px;padding-bottom:120px;gap:56px}
+.hero-video h1{font-size:clamp(3.25rem,6vw,6.3rem);line-height:1.045;letter-spacing:-.055em;max-width:860px;font-weight:750}
+.hero-video h1 em{font-style:normal;color:#edc47b}
+.hero-video .eyebrow{font-size:12px;letter-spacing:.19em;color:#e8bf76}
+.hero-video .hero-text{font-size:clamp(1.03rem,1.35vw,1.22rem);line-height:1.8;max-width:590px;color:#ecf5f0}
+.hero-video .btn{margin-top:25px}
+.hero-video .btn-outline{margin-left:12px;border:1px solid #ffffff8c;background:#ffffff0d;color:#fff;box-shadow:none}
+.hero-video .btn-outline:hover{background:#ffffff20;transform:translateY(-3px)}
+.hero-caption{font-size:10px;letter-spacing:.15em;color:#e8e9d8;margin-top:42px;display:flex;align-items:center;gap:12px}
+.caption-line{display:inline-block;width:36px;height:1px;background:var(--tak-gold)}
+.hero-proof{backdrop-filter:blur(10px);background:#082c26a8;border:1px solid #ffffff24;border-radius:14px;padding:22px 27px}
+.hero-proof>div{border-bottom:1px solid #ffffff26;padding:15px 0}
+.hero-proof>div:last-child{border:0}
+.hero-proof span{color:var(--tak-gold);font-size:26px}
+.home-trust-strip{background:#07392e;color:#e5e9dc;padding:21px 0;border-top:1px solid #ffffff1c}
+.trust-strip-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px;font-weight:700;letter-spacing:.12em}
+.trust-sep{height:18px;width:1px;background:#c2a66a6b}
+.home-intro{background:var(--tak-cream)}
+.intro-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:11%;align-items:center}
+.intro-layout h2,.portfolio-heading h2{font-size:clamp(2.1rem,3.7vw,4rem);line-height:1.12;letter-spacing:-.04em}
+.intro-layout p:not(.eyebrow),.portfolio-heading p:not(.eyebrow){font-size:1.05rem;line-height:1.85;color:#4b635b}
+.gold-ink{color:#b48b42}
+.service-grid article{position:relative;display:flex;flex-direction:column;min-height:260px;transition:transform .3s,box-shadow .3s,background .3s;border-radius:12px;padding:22px!important}
+.service-grid article:hover{transform:translateY(-9px);background:#f0f6ee;box-shadow:0 18px 45px #043a2c19}
+.service-number{font-size:12px;color:#b08a47;font-weight:700;letter-spacing:.12em}
+.service-more{margin-top:auto;padding-top:22px;text-decoration:none;color:#14664b;font-size:12px;font-weight:750}
+.home-portfolio{background:#edf2eb}
+.portfolio-heading{display:flex;justify-content:space-between;align-items:end;gap:45px;margin-bottom:32px}
+.portfolio-heading>div:last-child{max-width:420px}
+.home-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.home-project{display:block;background:#fff;padding:22px;border:1px solid #dbe4db;border-radius:13px;text-decoration:none;color:#133c30;transition:transform .3s,box-shadow .3s}
+.home-project:hover{transform:translateY(-8px);box-shadow:0 22px 50px #073d2b21}
+.project-index{font-size:10px;letter-spacing:.13em;color:#95723d;font-weight:750}
+.project-visual{height:150px;margin:18px 0;display:flex;align-items:center;justify-content:center;font-size:66px;color:#d9b36a;border-radius:8px;background:radial-gradient(circle at 65% 20%,#387a60,#083b32 72%)}
+.project-visual-b{background:radial-gradient(circle at 20% 20%,#487b76,#063c37 75%)}
+.project-visual-c{background:radial-gradient(circle at 70% 20%,#607e53,#153f32 75%)}
+.home-project h3{font-size:21px;margin:0 0 10px}.home-project p{font-size:13px;line-height:1.7;color:#587066;min-height:66px}.project-arrow{font-size:12px;font-weight:750;color:#b28a44}
+.home-cta{background:linear-gradient(125deg,#073e33,#082b27);color:white;padding:75px 0;position:relative;overflow:hidden}
+.home-cta:after{content:'TAK';position:absolute;right:-30px;bottom:-90px;font-size:260px;font-weight:900;color:#ffffff06;pointer-events:none}
+.home-cta-inner{display:flex;justify-content:space-between;align-items:center;gap:35px;position:relative;z-index:1}
+.home-cta h2{font-size:clamp(2rem,4vw,4rem);line-height:1.12;letter-spacing:-.04em}.home-cta h2 em{color:#e5b96d;font-style:normal}.home-cta p:not(.eyebrow){color:#d1e1d9}
+.home-intro .intro-layout,.home-portfolio .portfolio-heading,.home-project-grid .home-project,.home-cta-inner{animation:tak-enter .9s ease both}
+@keyframes tak-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){.hero-video .hero-grid{padding:95px 0}.hero-video h1{font-size:clamp(3rem,7vw,5rem)}.trust-strip-inner{flex-wrap:wrap;justify-content:center}.home-project-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.hero-video{min-height:650px}.hero-video .hero-grid{padding:100px 0 75px}.hero-video h1{font-size:clamp(2.6rem,10vw,4rem)}.hero-video .btn-outline{margin-left:0;margin-top:12px}.hero-caption{line-height:1.6}.hero-proof{display:none}.trust-sep{display:none}.trust-strip-inner{font-size:9px;text-align:center;gap:10px}.intro-layout{grid-template-columns:1fr;gap:12px}.portfolio-heading,.home-cta-inner{display:block}.home-project-grid{grid-template-columns:1fr}.home-cta .btn{margin-top:18px}.home-portfolio .btn{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.home-intro .intro-layout,.home-portfolio .portfolio-heading,.home-project-grid .home-project,.home-cta-inner{animation:none}.home-project:hover,.service-grid article:hover{transform:none}}
